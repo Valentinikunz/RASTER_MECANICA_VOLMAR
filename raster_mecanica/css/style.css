@@ -1,0 +1,469 @@
+/* ===============================
+   MECÂNICA VOLMAR - ESTILO GERAL
+   =============================== */
+
+:root {
+  --bg-dark: #0e1621;
+  --bg-light: #f5f7fb;
+  --blue: #1976d2;
+  --blue-dark: #1565c0;
+  --gray: #e0e3e7;
+  --text-dark: #1e1e1e;
+  --text-light: #ffffff;
+  --card-bg: #ffffff;
+  --border-radius: 12px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+  --transition: 0.3s ease;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ======== LAYOUT ======== */
+body {
+  background-color: var(--bg-light);
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* ======== CABEÇALHO ======== */
+.site-header {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.site-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-link {
+  color: var(--text-light);
+  text-decoration: none;
+  background: var(--blue);
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.btn-link:hover {
+  background: var(--blue-dark);
+}
+
+/* ======== NAVEGAÇÃO ======== */
+.main-nav {
+  background-color: #182635;
+  display: flex;
+  gap: 20px;
+  padding: 10px 25px;
+}
+
+.main-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: var(--transition);
+  border-radius: 6px;
+}
+
+.main-nav a:hover {
+  background-color: var(--blue);
+}
+
+/* ======== CARDS ======== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--blue-dark);
+}
+
+.card .big {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* ======== TABELAS ======== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: var(--shadow);
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: var(--blue);
+  color: var(--text-light);
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f0f3f8;
+}
+
+/* ======== FORMULÁRIOS ======== */
+label {
+  margin-right: 8px;
+}
+
+select, input[type="text"], input[type="number"], button {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+select:focus, input:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+button {
+  background-color: var(--blue);
+  color: var(--text-light);
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--blue-dark);
+}
+
+/* ======== ALERTAS ======== */
+.alert {
+  background-color: #e3f2fd;
+  border-left: 4px solid var(--blue);
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+}
+
+/* ======== GRÁFICOS ======== */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+canvas {
+  background: #fff;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  background: #182635;
+  color: var(--text-light);
+  border-top: 2px solid var(--blue);
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .site-header h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ==========================================
+   MECÂNICA VOLMAR - ESTILO COM MODO ESCURO
+   ========================================== */
+/* ======== MODO ESCURO ======== */
+body.dark {
+  --bg-light: #121212;
+  --text-dark: #e0e0e0;
+  --card-bg: #1f1f1f;
+  --gray: #2b2b2b;
+  --shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* ======== BASE ======== */
+body {
+  background-color: var(--bg-light);
+  margin: 0;
+  color: var(--text-dark);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* ======== CABEÇALHO ======== */
+.site-header {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.site-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Botão modo escuro */
+#toggleMode {
+  background: transparent;
+  color: var(--text-light);
+  border: 1px solid var(--text-light);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#toggleMode:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.btn-link {
+  color: var(--text-light);
+  text-decoration: none;
+  background: var(--blue);
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.btn-link:hover {
+  background: var(--blue-dark);
+}
+
+/* ======== NAVEGAÇÃO ======== */
+.main-nav {
+  background-color: #182635;
+  display: flex;
+  gap: 20px;
+  padding: 10px 25px;
+}
+
+.main-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: var(--transition);
+  border-radius: 6px;
+}
+
+.main-nav a:hover {
+  background-color: var(--blue);
+}
+
+/* ======== CARDS ======== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--blue-dark);
+}
+
+.card .big {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* ======== TABELAS ======== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: var(--shadow);
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.table thead {
+  background-color: var(--blue);
+  color: var(--text-light);
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f0f3f8;
+}
+
+body.dark .table tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+/* ======== FORMULÁRIOS ======== */
+label {
+  margin-right: 8px;
+}
+
+select, input[type="text"], input[type="number"], button {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+select:focus, input:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+button {
+  background-color: var(--blue);
+  color: var(--text-light);
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--blue-dark);
+}
+
+/* ======== ALERTAS ======== */
+.alert {
+  background-color: #e3f2fd;
+  border-left: 4px solid var(--blue);
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+}
+
+body.dark .alert {
+  background-color: #263238;
+  color: var(--text-light);
+}
+
+/* ======== GRÁFICOS ======== */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+canvas {
+  background: var(--card-bg);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  background: #182635;
+  color: var(--text-light);
+  border-top: 2px solid var(--blue);
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .site-header h1 {
+    font-size: 1.2rem;
+  }
+}
+
